@@ -28,16 +28,16 @@ const getYear = now.getFullYear();
 const getMonth = now.getMonth();
 const appointments = [];
 
+window.onload = (e) => {
+	printCurrentMonth();
+	createDays(dayInThisMonth());
+};
+
 // Scriviamo il nome del mese
 const printCurrentMonth = () => {
 	const title = document.querySelector('h1');
 	const currentMonth = monthNames[getMonth];
 	title.innerText = currentMonth;
-};
-
-window.onload = (e) => {
-	printCurrentMonth();
-	createDays(dayInThisMonth());
 };
 
 // Calcoliamo il numero di giorni
